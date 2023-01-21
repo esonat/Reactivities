@@ -6,6 +6,9 @@ using Application.Core;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Persistence;
+using FluentValidation;
+using FluentValidation.AspNetCore;
+using Application.Activities;
 
 namespace API.Extensions
 {
@@ -30,6 +33,8 @@ namespace API.Extensions
             });
             services.AddMediatR(typeof(Application.Activities.List.Handler));
             services.AddAutoMapper(typeof(MappingProfiles).Assembly);
+            services.AddFluentValidationAutoValidation();
+            services.AddValidatorsFromAssemblyContaining<Create>();
 
             return services;
         }
