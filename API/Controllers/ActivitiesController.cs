@@ -3,9 +3,11 @@ using MediatR;
 using Persistence;
 using Application.Activities;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace API.Controllers
 {
+    [AllowAnonymous]
     public class ActivitiesController : BaseApiController
     {   
         [HttpGet] //api/activities
@@ -15,7 +17,7 @@ namespace API.Controllers
             return HandleResult(await Mediator.Send(new List.Query()));
             //return await Mediator.Send(new List.Query());
         }
-
+        
         [HttpGet("{id}")] //api/activities/fdkdffdfd
         public async Task<IActionResult> GetActivity(Guid id)
         {            

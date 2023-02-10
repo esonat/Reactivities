@@ -6,7 +6,9 @@
       "dom.iterable",
       "esnext"
     ],
+    "typeRoots": ["node_modules/yup"],
     "allowJs": true,
+    "useUnknownInCatchVariables": false,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
