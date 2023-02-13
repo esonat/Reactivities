@@ -23,8 +23,8 @@ interface Props {
     activity: Activity
 }
 
-export default observer (function ActivityDetailedHeader({activity}: Props) {
-    const {activityStore: {updateAttendance, loading, cancelActivityToggle}} = useStore();
+export default observer (function ActivityDetailedHeader({ activity }: Props) {
+    const { activityStore: { updateAttendance, loading, cancelActivityToggle}} = useStore();
     return (
         <Segment.Group>
             <Segment basic attached='top' style={{padding: '0'}}>
@@ -32,7 +32,7 @@ export default observer (function ActivityDetailedHeader({activity}: Props) {
                     <Label style={{position: 'absolute', zIndex: 1000, left: -14, top: 20}} 
                         ribbon color='red' content='Cancelled' />
                 }
-                <Image src={`/assets/categoryImages/${activity.category}.jpg`} fluid style={activityImageStyle}/>
+                <Image src={`/assets/categoryImages/${activity.category}.jpg`} fluid style={activityImageStyle} />
                 <Segment style={activityImageTextStyle} basic>
                     <Item.Group>
                         <Item>

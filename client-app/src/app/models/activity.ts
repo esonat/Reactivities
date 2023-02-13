@@ -12,8 +12,8 @@ export interface Activity {
     isCancelled: boolean;
     isGoing: boolean;
     isHost: boolean;
-    host?: Profile;
     attendees: Profile[];
+    host?: Profile;
 }
 
 export class ActivityFormValues {
