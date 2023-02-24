@@ -1,13 +1,3 @@
-using API.Extensions;
-using API.Middleware;
-using API.SignalR;
-using Domain;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc.Authorization;
-using Microsoft.EntityFrameworkCore;
-using Persistence;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -61,4 +51,5 @@ catch (Exception ex)
 }
 
 
-app.Run();
+//app.Run();
+await app.RunAsync();
